@@ -26,9 +26,20 @@ ______________________________________________________________________
 		ex: localhost:3000/loans/1/payments/2
 		* Shows data associated with this payment (ie, payment date & amount)
 
+	'PaymentsController#create'
+		ex: localhost:3000/loans/1/payments 
+		*validates for incoming data 
+		*persists data if everything is fine
+
 	-make sure there is server side and front end validation for payment amount input 
 	-calculate remaining balance every time (perferably serverside) to display on front end. 
 
 	Payment Schema: 
 		amount:decimal 
 		payment_date: date
+		loan:Loan 
+
+	Loan Schema:
+		funded_amount:decimal
+		payments:Payment
+		balance: decimal
