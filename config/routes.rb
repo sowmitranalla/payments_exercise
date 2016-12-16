@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  get 'payments/index'
+  resources :payments, only: [:create, :show] 
 
   resources :loans, defaults: {format: :json}
 end

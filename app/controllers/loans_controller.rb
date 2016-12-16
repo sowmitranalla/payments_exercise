@@ -9,7 +9,10 @@ class LoansController < ApplicationController
   end
 
   def show
-    render json: Loan.find(params[:id])
+  	loan = Loan.find(params[:id])
+  	payments = Payment.where(loan_id: params[:id])
+  	#loan.push(payments)
+    render json:  payments
   end
 
 end

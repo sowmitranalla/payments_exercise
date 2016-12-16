@@ -23,11 +23,11 @@ ______________________________________________________________________
 		* Shows all loans and their remaining balance 
 
 	`PaymentsController#show`
-		ex: localhost:3000/loans/1/payments/2
+		ex: localhost:3000/payments/2
 		* Shows data associated with this payment (ie, payment date & amount)
 
 	'PaymentsController#create'
-		ex: localhost:3000/loans/1/payments 
+		ex: localhost:3000/payments 
 		*validates for incoming data 
 		*persists data if everything is fine
 
