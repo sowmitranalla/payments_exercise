@@ -13,7 +13,7 @@ class PaymentsController < ApplicationController
   	if(params[:payment][:payment_amount]<=loan.balance)
   		pay.save
   	else
-  		render 'payment cannot be above remaining balance'
+  		render json: 'payment cannot be above remaining balance'
   end
 
   def show
