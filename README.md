@@ -22,7 +22,7 @@ ______________________________________________________________________
 		ex: localhost:3000/loans/
 		* Shows all loans and their remaining balance 
 
-	`PaymentsController#index`
+	`PaymentsController#show`
 		ex: localhost:3000/loans/1/payments/2
 		* Shows data associated with this payment (ie, payment date & amount)
 
