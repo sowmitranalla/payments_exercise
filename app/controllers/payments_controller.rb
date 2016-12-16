@@ -9,11 +9,12 @@ class PaymentsController < ApplicationController
   	#puts 'in create PaymentsController'
   	pay = Payment.new(payment_params)
   	loan_id = params[:payment][:loan_id]
-  	loan = Loan.find_by(id: => loan_id)
+  	loan = Loan.find_by(id: loan_id)
   	if(params[:payment][:payment_amount]<=loan.balance)
   		pay.save
   	else
   		render json: 'payment cannot be above remaining balance'
+  	end
   end
 
   def show
